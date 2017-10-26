@@ -126,6 +126,18 @@ callback和request类似，其中，`onSuccess(byte[] bytes)`回调的bytes为�
 [FUAvatarGen setupWithAuthPackage:g_auth_package authSize:sizeof(g_auth_package)];
 
 ```
+
+### 设置 URL
+
+设置网络请求的 URL，如果不调用该接口，在生成 avatar 时会访问内置的 URL
+
+	/**
+	 设置网络请求地址及端口号，如果不设置会使用内部默认域名
+	
+	 @param hostUrl 网络请求地址及端口号，格式为"https://host:port"
+	 */
+	+ (void)setHostUrl:(NSString *)hostUrl;
+	
 ### 创建 avatar
 
 生成 avatar 接口：
